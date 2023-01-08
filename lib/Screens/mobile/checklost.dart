@@ -238,10 +238,13 @@ body: Column(
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        RaisedButton(onPressed: (){
+                                        ElevatedButton(
+                                          style:ButtonStyle(
+                                              backgroundColor:MaterialStateProperty.all(Colors.amber)
+                                          ),onPressed: (){
                                                  update(documentSnapshot.get('IMEI').toString().toLowerCase());
                                                  Navigator.pop(ctx);
-                                          },color: Colors.amber,child: Text("Found",style:DataStyles(Colors.black,14)),),
+                                          },child: Text("Found",style:DataStyles(Colors.black,14)),),
                                       ],
                                     ),
                                   ],
@@ -304,8 +307,11 @@ body: Column(
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    RaisedButton(onPressed: (){
-                    },color: Colors.amber,child: Text("Update",style:DataStyles(Colors.black,14)),),
+                    ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.amber)
+                      ),onPressed: (){
+                    },child: Text("Update",style:DataStyles(Colors.black,14)),),
                   ],
                 ),
               ],

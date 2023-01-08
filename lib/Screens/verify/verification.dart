@@ -229,7 +229,10 @@ class _VerificationState extends State<Verification> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
-                                     RaisedButton(
+                                      ElevatedButton(
+                                        style:ButtonStyle(
+                                            backgroundColor:MaterialStateProperty.all(Colors.amber)
+                                        ),
                                         onPressed: (){
                                         screenshotController
                                             .capture(
@@ -250,11 +253,12 @@ class _VerificationState extends State<Verification> {
 
                                         }).catchError((onError) {
                                           print(onError);
+
                                         });
                                         // update(documentSnapshot.get('IMEI').toString().toLowerCase());
                                         // Navigator.pop(ctx);
                                       },
-                                       color: Colors.amber,
+
                                        child: Row(
                                       children: [
                                       Icon(Icons.download_outlined),

@@ -191,7 +191,10 @@ class _BuyDeadPhonesState extends State<BuyDeadPhones> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
 
-                  RaisedButton(
+                  ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.green)
+                      ),
                       onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (_)=>
                         AvailableDeadParts(
@@ -202,7 +205,7 @@ class _BuyDeadPhonesState extends State<BuyDeadPhones> {
                             otherStrips: otherStrips
                         )));
                   },
-                      color: Colors.green,
+
                       child: Text('More Details',style: styleText(Colors.white,13.0),))
                 ],
               ),

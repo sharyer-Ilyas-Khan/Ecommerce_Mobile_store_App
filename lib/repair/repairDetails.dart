@@ -176,17 +176,23 @@ class _RepairingDetailsState extends State<RepairingDetails> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    (notify==true)?RaisedButton(onPressed: (){
+                    (notify==true)? ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.red)
+                      ),onPressed: (){
                       print(notify);
                     },
-                      color: Colors.red,
+
                       child: Text("Cancel"),
 
-                    ):RaisedButton(onPressed: (){
+                    ): ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.green)
+                      ),onPressed: (){
                       update();
                       print(notify);
                       },
-                    color: Colors.green,
+
                     child: Text("Book"),
 
     ),
@@ -264,18 +270,24 @@ class _RepairingDetailsState extends State<RepairingDetails> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     (notify==true)?
-                    RaisedButton(onPressed: (){
+                    ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.red)
+                      ),onPressed: (){
                       print(notify);
                     },
-                      color: Colors.red,
+
                       child: Text("Cancel"),
 
                     ):
-                    RaisedButton(onPressed: (){
+                    ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.green)
+                      ),onPressed: (){
                       update();
                       print(notify);
                     },
-                      color: Colors.green,
+
                       child: Text("Book"),
 
                     ),

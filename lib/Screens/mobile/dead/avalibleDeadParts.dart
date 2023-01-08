@@ -325,8 +325,10 @@ class _AvailableDeadPartsState extends State<AvailableDeadParts> {
               ),
             ),
             Center(
-              child: RaisedButton(
-                color: Colors.black,
+              child: ElevatedButton(
+                style:ButtonStyle(
+                    backgroundColor:MaterialStateProperty.all(Colors.black)
+                ),
                 onPressed: (){
                 },
 

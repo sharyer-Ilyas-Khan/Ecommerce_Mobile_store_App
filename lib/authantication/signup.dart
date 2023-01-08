@@ -144,10 +144,10 @@ String group="simple";
 
                               ),
                               actions: <Widget>[
-                                FlatButton.icon(onPressed: camera,
+                                TextButton.icon(onPressed: camera,
                                     icon: Icon(Icons.camera,color: Colors.grey,size: 30,),
                                     label: Text('Camera',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
-                                FlatButton.icon(onPressed: gallery,
+                                TextButton.icon(onPressed: gallery,
                                     icon: Icon(Icons.image,color: Colors.grey,size: 30),
                                     label: Text('Gallery',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)))
 
@@ -367,7 +367,10 @@ String group="simple";
                             color: Colors.red
                         ),),
                       ),
-                      RaisedButton(onPressed: ()async{
+                       ElevatedButton(
+                  style:ButtonStyle(
+                      backgroundColor:MaterialStateProperty.all(Colors.black)
+                  ),onPressed: ()async{
                           if(_formKey.currentState.validate()&& image!=null ) {
                             setState(() {
                               load=true;
@@ -393,15 +396,15 @@ String group="simple";
                           }
                           },
 
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0)
-                      ),
                         child: Text(
                           'SIGNUP',
                           style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
-                          color: Colors.black,),
+                          ),
 
-                      RaisedButton(onPressed: (){
+                       ElevatedButton(
+                  style:ButtonStyle(
+                      backgroundColor:MaterialStateProperty.all(Colors.red)
+                  ),onPressed: (){
                         showDialog(
 
                             context: context,
@@ -409,21 +412,20 @@ String group="simple";
                               title: Text("Warning"),
                               content: Text("Are you sure want to Exit"),
                               actions: <Widget>[
-                                FlatButton(onPressed: (){
+                                TextButton(onPressed: (){
                                   SystemNavigator.pop();
                                 },child: Text("Yes"),),
-                                FlatButton(onPressed: (){
+                                TextButton(onPressed: (){
                                   Navigator.of(context).pop(false);
                                 },child: Text("No"),),
                               ],
                             )
                         );
                       },
-                          shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0)),
+
                         child: Text(
                           ' EXIT ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)
-                         ),color:Colors.red)
+                         ),)
                     ],
                   ),
 

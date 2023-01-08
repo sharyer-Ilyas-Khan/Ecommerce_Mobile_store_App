@@ -106,15 +106,21 @@ class _DashboardState extends State<Dashboard> {
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                             children: [
-                                              RaisedButton(onPressed: (){
+                                              ElevatedButton(
+                                                style:ButtonStyle(
+                                                    backgroundColor:MaterialStateProperty.all(Colors.blue)
+                                                ),onPressed: (){
 
                                                 Navigator.pop(ctx);
                                                 Navigator.push(context, MaterialPageRoute(builder: (_)=>SignUp()));
-                                              },color: Colors.blue,child: Text("Sign Up"),),
-                                              RaisedButton(onPressed: (){
+                                              },child: Text("Sign Up"),),
+                                              ElevatedButton(
+                                                style:ButtonStyle(
+                                                    backgroundColor:MaterialStateProperty.all(Colors.grey)
+                                                ),onPressed: (){
                                                 Navigator.pop(ctx);
 
-                                              },color: Colors.grey,child: Text("Cancel"),)
+                                              },child: Text("Cancel"),)
                                             ],
                                           ),
                                         ],
@@ -472,16 +478,22 @@ class _DashboardState extends State<Dashboard> {
           content: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-             RaisedButton(onPressed: (){
+              ElevatedButton(
+                style:ButtonStyle(
+                    backgroundColor:MaterialStateProperty.all(Colors.green)
+                ),onPressed: (){
 
                Navigator.pop(ctx);
                Navigator.push(context, MaterialPageRoute(builder: (_)=>BuyDeadPhones()));
-             },color: Colors.green,child: Text("Buy"),),
-             RaisedButton(onPressed: (){
+             },child: Text("Buy"),),
+              ElevatedButton(
+                style:ButtonStyle(
+                    backgroundColor:MaterialStateProperty.all(Colors.green)
+                ),onPressed: (){
                Navigator.pop(ctx);
                Navigator.push(context, MaterialPageRoute(builder: (_)=>SellDeadPhone()));
 
-               },color: Colors.green,child: Text("Sell"),)
+               },child: Text("Sell"),)
             ],
           )
         ),
@@ -494,14 +506,20 @@ class _DashboardState extends State<Dashboard> {
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  RaisedButton(onPressed: (){
+                  ElevatedButton(
+                    style:ButtonStyle(
+                        backgroundColor:MaterialStateProperty.all(Colors.green)
+                    ),onPressed: (){
                     Navigator.pop(ctx);
                     Navigator.push(context, MaterialPageRoute(builder: (_)=>CheckLost()));
-                  },color: Colors.green,child: Text("Check"),),
-                  RaisedButton(onPressed: (){
+                  },child: Text("Check"),),
+                  ElevatedButton(
+                    style:ButtonStyle(
+                        backgroundColor:MaterialStateProperty.all(Colors.green)
+                    ),onPressed: (){
                     Navigator.pop(ctx);
                     Navigator.push(context, MaterialPageRoute(builder: (_)=>route));
-                  },color: Colors.green,child: Text("Lost"),)
+                  },child: Text("Lost"),)
                 ],
               )
           ),
@@ -536,15 +554,21 @@ class _DashboardState extends State<Dashboard> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        RaisedButton(onPressed: (){
+                        ElevatedButton(
+                          style:ButtonStyle(
+                              backgroundColor:MaterialStateProperty.all(Colors.blue)
+                          ),onPressed: (){
 
                           Navigator.pop(ctx);
                           Navigator.push(context, MaterialPageRoute(builder: (_)=>SignUp()));
-                        },color: Colors.blue,child: Text("Sign Up"),),
-                        RaisedButton(onPressed: (){
+                        },child: Text("Sign Up"),),
+                        ElevatedButton(
+                          style:ButtonStyle(
+                              backgroundColor:MaterialStateProperty.all(Colors.blue)
+                          ),onPressed: (){
                           Navigator.pop(ctx);
 
-                        },color: Colors.grey,child: Text("Cancel"),)
+                        },child: Text("Cancel"),)
                       ],
                     ),
                   ],
@@ -663,15 +687,21 @@ class _DashboardState extends State<Dashboard> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    RaisedButton(onPressed: (){
+                    ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.blue)
+                      ),onPressed: (){
 
                       Navigator.pop(ctx);
                       Navigator.push(context, MaterialPageRoute(builder: (_)=>SignUp()));
-                    },color: Colors.blue,child: Text("Sign Up"),),
-                    RaisedButton(onPressed: (){
+                    },child: Text("Sign Up"),),
+                    ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.grey)
+                      ),onPressed: (){
                       Navigator.pop(ctx);
 
-                    },color: Colors.grey,child: Text("Cancel"),)
+                    },child: Text("Cancel"),)
                   ],
                 ),
               ],

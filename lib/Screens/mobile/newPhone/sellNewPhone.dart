@@ -72,12 +72,14 @@ class _SellNewPhoneState extends State<SellNewPhone> {
                             title: Text('Choose Image',style: deco(Colors.black, 12)),
                             actions: <Widget>
                             [
-                              FlatButton.icon(onPressed: camera,
+                              IconButton(onPressed: camera,
                                   icon: Icon(Icons.camera,color: Colors.amber,size: 30,),
-                                  label: Text('Camera',style: deco(Colors.black, 12))),
-                              FlatButton.icon(onPressed: gallery,
+                                  // label: Text('Camera',style: deco(Colors.black, 12))
+                              ),
+                              IconButton(onPressed: gallery,
                                   icon: Icon(Icons.image,color: Colors.amber,size: 30),
-                                  label: Text('Gallery',style: deco(Colors.black, 12)))])
+                                  // label: Text('Gallery',style: deco(Colors.black, 12))
+                              )])
 
                     );
                   },
@@ -395,8 +397,11 @@ class _SellNewPhoneState extends State<SellNewPhone> {
                 child: Text(error,style: TextStyle(color: Colors.red),),
               ),
               Center(
-                child: RaisedButton(
-                  color: Colors.black,
+                child: ElevatedButton(
+                  style:ButtonStyle(
+                      backgroundColor:MaterialStateProperty.all(Colors.black)
+                  ),
+
                   onPressed: (){
                     if(image!=null && demand!=null && selectBrand!="Select mobile" && ram!= "Select Ram" && rom!= "Select Rom") {
                       usedMobileData(

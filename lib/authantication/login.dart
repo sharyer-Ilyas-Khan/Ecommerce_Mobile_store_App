@@ -130,14 +130,14 @@ class _LoginState extends State<Login> {
                       style: TextStyle(fontSize: 12),//password field
                   decoration:decopass('PASSWORD'))
                 ,
-                FlatButton(onPressed: (){
+                TextButton(onPressed: (){
                   setState(() {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) =>ResetScreen()));
                   });
                 },
                     child: Text("Reset Password?")),
-                FlatButton(onPressed: (){
+                TextButton(onPressed: (){
                   setState(Change);
                 },
                     child: Text("Create Account")),
@@ -147,7 +147,10 @@ class _LoginState extends State<Login> {
 
                   ),
                 ),
-              RaisedButton(onPressed:()async {
+                ElevatedButton(
+                  style:ButtonStyle(
+                      backgroundColor:MaterialStateProperty.all(Colors.black)
+                  ),onPressed:()async {
                 if(_formkey.currentState.validate()){
                   setState(() {
                     load=true;
@@ -167,15 +170,16 @@ class _LoginState extends State<Login> {
                   });
               }}},
 
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0)
-                ),
+
                 child: Text('LOGIN',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-              color: Colors.black,
 
               ),
 
-              RaisedButton(onPressed: (){
+                ElevatedButton(
+                    style:ButtonStyle(
+                        backgroundColor:MaterialStateProperty.all(Colors.red)
+                    ),
+                  onPressed: (){
 
                showDialog(
 
@@ -184,10 +188,10 @@ class _LoginState extends State<Login> {
                     title: Text("Warning"),
                     content: Text("Are you sure want to Exit"),
                     actions: <Widget>[
-                     FlatButton(onPressed: (){
+                     TextButton(onPressed: (){
                        SystemNavigator.pop();
                      },child: Text("Yes"),),
-                      FlatButton(onPressed: (){
+                      TextButton(onPressed: (){
                         Navigator.of(context).pop(false);
                       },child: Text("No"),),
                     ],
@@ -195,11 +199,8 @@ class _LoginState extends State<Login> {
                   );
 
                 },
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0)
-                ),
                 child: Text('EXIT',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
-              color: Colors.red),
+           ),
 
             ],
           ),

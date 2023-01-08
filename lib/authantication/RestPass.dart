@@ -84,7 +84,10 @@ class _ResetScreenState extends State<ResetScreen> {
                           fontSize: 16,
                           color: clr)),
                     )),
-            RaisedButton(onPressed:()async {
+                ElevatedButton(
+                  style:ButtonStyle(
+                      backgroundColor:MaterialStateProperty.all(Colors.black)
+                  ),onPressed:()async {
               if(_formkey.currentState.validate()){
                 setState(() {
                   load=true;
@@ -105,25 +108,22 @@ class _ResetScreenState extends State<ResetScreen> {
                     load=false;
                   });
                 }
-              }}, shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18.0)
-      ),
+              }},
       child: Text('RESET',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
-      color: Colors.black,
+
     ),
-             RaisedButton(onPressed: (){
+                ElevatedButton(
+                  style:ButtonStyle(
+                      backgroundColor:MaterialStateProperty.all(Colors.black)
+                  ),onPressed: (){
                setState(() {
                  Navigator.pushReplacement(context,
                      MaterialPageRoute(builder: (context) =>Login()));
                });
              },
 
-               shape: RoundedRectangleBorder(
-                   borderRadius: BorderRadius.circular(18.0)
-               ),
 
                child: Text('LOGIN',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
-               color: Colors.black,
 
              )
               ],

@@ -167,11 +167,14 @@ class _DeliveryServiceState extends State<DeliveryService> {
                   SizedBox(height: width*0.1),
                   Padding(
                     padding:EdgeInsets.only(left: 25.0,right: 25.0),
-                    child: RaisedButton(onPressed: (){
+                    child: ElevatedButton(
+                      style:ButtonStyle(
+                          backgroundColor:MaterialStateProperty.all(Colors.amber)
+                      ),onPressed: (){
 
                     },
                       child: Text('Confirm Delivery'),
-                      color: Colors.amber,
+
                     ),
                   )
                 ],

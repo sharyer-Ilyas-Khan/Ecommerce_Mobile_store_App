@@ -295,10 +295,13 @@ class _RepairingState extends State<Repairing> {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                         children: [
-                                          RaisedButton(onPressed: (){
+                                          ElevatedButton(
+                                            style:ButtonStyle(
+                                                backgroundColor:MaterialStateProperty.all(Colors.blue)
+                                            ),onPressed: (){
                                             Navigator.pop(ctx);
                                             Navigator.push(context, MaterialPageRoute(builder: (_)=>Dashboard()));
-                                          },color: Colors.blue,child: Text("Done"),),
+                                          },child: Text("Done"),),
                                         ],
                                       ),
                                     ],
@@ -539,10 +542,13 @@ class _RepairingState extends State<Repairing> {
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        RaisedButton(onPressed: (){
+                                        ElevatedButton(
+                                          style:ButtonStyle(
+                                              backgroundColor:MaterialStateProperty.all(Colors.blue)
+                                          ),onPressed: (){
                                           Navigator.pop(ctx);
                                           Navigator.push(context, MaterialPageRoute(builder: (_)=>Dashboard()));
-                                        },color: Colors.blue,child: Text("Done"),),
+                                        },child: Text("Done"),),
                                       ],
                                     ),
                                   ],

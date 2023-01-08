@@ -92,7 +92,10 @@ class _RepairTechState extends State<RepairTech> {
                                       (button=="true")?"Button":"",
                                           overflow: TextOverflow.ellipsis),
                                     ),
-                                    RaisedButton(onPressed: (){
+                                    ElevatedButton(
+                                      style:ButtonStyle(
+                                          // backgroundColor:MaterialStateProperty.all(Colors.green)
+                                      ),onPressed: (){
                                           Navigator.push(context,
                                               MaterialPageRoute(
                                                   builder: (_)=>RepairingDetails(
@@ -194,7 +197,10 @@ class _RepairTechState extends State<RepairTech> {
                                       overflow: TextOverflow.ellipsis
                                       ),
                                     ),
-                                    RaisedButton(onPressed: (){
+                                    ElevatedButton(
+                                      style:ButtonStyle(
+                                          // backgroundColor:MaterialStateProperty.all(Colors.green)
+                                      ),onPressed: (){
                                       print(docID);
                                       Navigator.push(context, MaterialPageRoute(builder: (_)=>RepairingDetails(
                                         docId:docID,

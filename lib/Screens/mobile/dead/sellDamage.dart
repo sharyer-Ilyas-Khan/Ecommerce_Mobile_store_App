@@ -554,8 +554,11 @@ class _DamagedPhoneState extends State<DamagedPhone> {
               ),
             ),
             Center(
-              child: RaisedButton(
-                color: Colors.black,
+              child:ElevatedButton(
+                style:ButtonStyle(
+                    backgroundColor:MaterialStateProperty.all(Colors.black)
+                ),
+
                 onPressed: (){
                   uploadData();
                 },

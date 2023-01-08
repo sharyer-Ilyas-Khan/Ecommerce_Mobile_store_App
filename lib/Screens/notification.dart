@@ -97,7 +97,10 @@ class _NotificationClassState extends State<NotificationClass> {
                                             (button=="true")?"Button":"",
                                             overflow: TextOverflow.ellipsis),
                                       ),
-                                      RaisedButton(onPressed: (){
+                                      ElevatedButton(
+                                        style:ButtonStyle(
+                                            // backgroundColor:MaterialStateProperty.all(Colors.blue)
+                                        ),onPressed: (){
                                         Navigator.push(context,
                                             MaterialPageRoute(
                                                 builder: (_)=>RepairingDetails(
@@ -201,7 +204,10 @@ class _NotificationClassState extends State<NotificationClass> {
                                             overflow: TextOverflow.ellipsis
                                         ),
                                       ),
-                                      RaisedButton(onPressed: (){
+                                      ElevatedButton(
+                                        style:ButtonStyle(
+                                            // backgroundColor:MaterialStateProperty.all(Colors.blue)
+                                        ),onPressed: (){
                                         Navigator.push(context, MaterialPageRoute(builder: (_)=>
                                             RepairingDetails(
                                               notify: notify,
